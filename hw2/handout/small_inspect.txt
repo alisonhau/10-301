@@ -1,0 +1,2 @@
+gini_impurity: 0.497449
+error: 0.464286
