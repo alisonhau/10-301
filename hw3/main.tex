@@ -543,14 +543,14 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \begin{checkboxes}
         \choice Yes
-        \choice No
+        \CorrectChoice No
     \end{checkboxes}
     Why or why not? Explain your reason briefly (you can use mathematical expressions).\\
     
     \textbf{NOTE: Please do not change the size of the following text box, and keep your answer in it. Thank you!} \\ \\
     \begin{tcolorbox}[fit,height=2cm, width=15cm, blank, borderline={1pt}{-2pt},nobeforeafter,top=2pt, left=2pt, right=2pt, bottom=2pt]
     \large
-    Your answer.
+    There will always be circumstances that cannot be predicted using this decision tree model, so there will always be the possibility of misclassification.
 
     \end{tcolorbox} \\
     
@@ -566,20 +566,20 @@ For questions where you must fill in a blank, please make sure your final answer
     \begin{checkboxes}
         \choice 1
         \choice 2
-        \choice 4
+        \CorrectChoice 4
         \choice 16
     \end{checkboxes}
     \part What is the minimum depth of decision trees to perfectly classify the colored regions, using ANY features?
     \begin{checkboxes}
         \choice 1
-        \choice 2
+        \CorrectChoice 2
         \choice 4
         \choice 16
     \end{checkboxes}
     \end{parts}
     
     \question[3] \textbf{Ensemble of Decision Tree.} Say we have a data set shown below. In total, there are 12 data points, with 6 in label "-" and 6 in label "+". We would like to use Decision Tree to solve this binary classification problem. However, in our problem setting, each Decision Tree has access to only ONE line. That is to say, our Decision Tree would have access to only one attribute, and so has max-depth of 1. \\ \\
-    By accessing this line, the Decision Tree could know (and only know) whether the data point is on the right side of this line or the left side. (Unofficial definition: let's assume the right side of a line shares the same direction with the \textcolor{OliveGreen}{\textbf{green}} normal vector of that line.) \\ \\
+	By accessing this line, the Decision Tree could know (and only know) whether the data point is on the right side of this line or the left side. (Unofficial definition: let's assume the right side of a line shares the same direction with the {\textbf{green}} normal vector of that line.) \\ \\
     Finally, please use majority vote strategy to make classification decision at each leaf.\\
     
     \begin{figure}[H]
@@ -592,6 +592,7 @@ For questions where you must fill in a blank, please make sure your final answer
         \part  If we train only one Decision Tree, what is the best/lowest error rate? Note that we have in total 12 data points. (Please round to 4 decimal.) \\ \\
     \begin{tcolorbox}[fit,height=1cm, width=15cm, blank, borderline={1pt}{-2pt}, nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     %solution
+	    0.2500
     \end{tcolorbox} 
     
     
@@ -599,6 +600,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \part If we could use two Decision Trees, what is the best/lowest error rate? Let's say, if we have two Decision Trees, then each would predict each data point with label like '+' or '-'. Then we would like to combine these predictions as the final result. If these two all predict '+', then the result is '+'. The same with '-'. However, if one predicts '+' while one predicts '-', then to break tie, we always choose '-' as the final result. (Please round to 4 decimal.) \\ \\
     \begin{tcolorbox}[fit,height=1cm, width=15cm, blank, borderline={1pt}{-2pt}, nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     %solution
+	    0.2500
     \end{tcolorbox} \\
     
     
@@ -607,6 +609,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \item Now let's train three Decision Trees as a forest, what is the best/lowest error rate? The ensemble strategy is now unanimous voting. That is, if every Decision Tree agree, then the final result is positive. However, if one of them has a different answer from the other two, then we predict negative. That means, we train each DT individually, with each DT choose one unique line as its decision boundary. Each DT would try its best to achieve high accuracy. And, next, if all DTs agrees, then it will give positive label. (Please round to 4 decimal.) \\ \\
     \begin{tcolorbox}[fit,height=1cm, width=15cm, blank, borderline={1pt}{-2pt}, nobeforeafter]
     %solution
+	    0.0000
     \end{tcolorbox} \\
     
     \end{parts}
@@ -614,7 +617,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \question[2] Consider a binary classification problem using $1$-nearest neighbors. We have $N$ 1-dimensional training points $x_1, x_2, \ldots x_N$ and corresponding labels $y_1, y_2, \ldots y_N$ with $x_i \in \mathbb{R}$ and $y_i \in \{0, 1\}$. Assume the points $x_1, x_2, \ldots x_N$ are in ascending order by value. If there are ties during the 1-NN algorithm, we break ties by choosing the label of the $x_i$ with lower value. Assume we are using the Euclidean distance metric. Is it possible to build a decision tree where the decision at each node takes the form of “$x \leq t$ or $x > t$”, where $t \in \mathbb{R}$ behaves exactly the same as the 1-nearest neighbor classifier?
     
     \begin{checkboxes}
-        \choice Yes
+        \CorrectChoice Yes
         \choice No
     \end{checkboxes}
      If your answer is yes, please explain how you will construct the decision tree. If your answer is no, explain why it’s not possible.  \\
@@ -622,7 +625,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{NOTE: Please do not change the size of the following text box, and keep your answer in it. Thank you!} \\ \\
     \begin{tcolorbox}[fit,height=4cm, width=15cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     \large
-    Your answer.
+	    Yes -- construct the tree such that each leaf $l_i$ represents an interval around each $x_i$ such that any point within that interval would have said $x_i$ as its Euclidean distance nearest neighbor (each split node is halfway between two values of $x_i$). The leaf $l_i$ classifies points with label $y_i$. 
 
     \end{tcolorbox} \\
     
@@ -661,7 +664,7 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \textbf{Select one:}
     \begin{checkboxes}
-        \choice Euclidean Distance
+        \CorrectChoice Euclidean Distance
         \choice Manhattan Distance
     \end{checkboxes}
 
@@ -679,6 +682,7 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     %solution
+	    0.2875
     \end{tcolorbox}
  
     
@@ -687,6 +691,7 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     %solution
+	    1
     \end{tcolorbox}
 
     
@@ -699,21 +704,21 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select one:}
     \begin{checkboxes}
         \choice True
-        \choice False
+        \CorrectChoice False
     \end{checkboxes}
     
     \part[2] Instead of choosing the hyper-parameters by merely minimizing the training set error, we instead consider splitting the training-all data set into a training and a validation data set, and choose the hyper-parameters that lead to lower validation error. Is choosing hyper-parameters based on validation error better than choosing hyper-parameters based on training error? Justify your opinion with no more than 3 sentences.
 
     \textbf{Select one:}
     \begin{checkboxes}
-        \choice Yes
+        \CorrectChoice Yes
         \choice No
     \end{checkboxes}
 
     \textbf{NOTE: Please do not change the size of the following text box, and keep your answer in it. Thank you!} \\ \\
     \begin{tcolorbox}[fit,height=4cm, width=15cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     \large
-    Your answer.
+    Choosing based on training data increases possibility of overfitting to the training data, so setting aside data for validation to choose hyperparameters makes it less likely that the model overfits and loses information about general trends that we want to predict. 
 
     \end{tcolorbox} \\
 
@@ -743,7 +748,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \begin{checkboxes}
         \choice 1 only
         \choice 2 only
-        \choice 2, 3, 4
+        \CorrectChoice 2, 3, 4
         \choice 2, 4
         \choice 4 only
         \choice 1, 2, 3, 4
@@ -778,6 +783,7 @@ For questions where you must fill in a blank, please make sure your final answer
 
     \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     %solution
+	    3
     \end{tcolorbox}
 
  
@@ -791,6 +797,7 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
     %solution
+	    132
     \end{tcolorbox}
     
     
@@ -806,8 +813,8 @@ For questions where you must fill in a blank, please make sure your final answer
     {
     \checkboxchar{$\Box$} \checkedchar{$\blacksquare$}
     \begin{checkboxes}
-        \choice Rescaling only ``High School GPA" to be a percentage of 4.0
-        \choice Rescaling only ``University GPA" to be a percentage of 4.0
+        \CorrectChoice Rescaling only ``High School GPA" to be a percentage of 4.0
+        \CorrectChoice Rescaling only ``University GPA" to be a percentage of 4.0
         \choice Rescaling both ``High School GPA" and ``University GPA", so that each is a percentage of 4.0 (scale by the same percentage).
         \choice None of the above.
     \end{checkboxes}
@@ -821,9 +828,9 @@ For questions where you must fill in a blank, please make sure your final answer
     \checkboxchar{$\Box$} \checkedchar{$\blacksquare$}
     \textbf{Select all that apply:}
     \begin{checkboxes}
-        \choice For classification tasks, both $k$-NN and the perceptron algorithm can have linear decision boundaries.
+        \CorrectChoice For classification tasks, both $k$-NN and the perceptron algorithm can have linear decision boundaries.
         \choice For classification tasks, both $k$-NN and the perceptron algorithm always have linear decision boundaries.
-        \choice All three models can be susceptible to overfitting.
+        \CorrectChoice All three models can be susceptible to overfitting.
         \choice In all three models, after the training is completed, we must store the training data to make predictions on the test data.
         \choice None of the above.
     \end{checkboxes}
@@ -835,10 +842,10 @@ For questions where you must fill in a blank, please make sure your final answer
     {
     \checkboxchar{$\Box$} \checkedchar{$\blacksquare$}
     \begin{checkboxes}
-        \choice A larger $k$ gives a smoother decision boundary.
+        \CorrectChoice A larger $k$ gives a smoother decision boundary.
         \choice To reduce the impact of noise or outliers in our data, we should increase the value $k$.
         \choice If we make $k$ too large, we could end up overfitting the data.
-        \choice We can use cross-validation to help us select the value of $k$.
+        \CorrectChoice We can use cross-validation to help us select the value of $k$.
         \choice We should never select the $k$ that minimizes the error on the validation dataset.
         \choice None of the above.
     \end{checkboxes}
@@ -857,7 +864,7 @@ For questions where you must fill in a blank, please make sure your final answer
 
     \textbf{Select one:}
     \begin{checkboxes}
-        \choice True
+        \CorrectChoice True
         \choice False
     \end{checkboxes}
 
@@ -876,8 +883,8 @@ For questions where you must fill in a blank, please make sure your final answer
     {
     \checkboxchar{$\Box$} \checkedchar{$\blacksquare$}
     \begin{checkboxes}
-        \choice AND function, i.e., the function that evaluates to 1 if and only if all inputs are 1, and 0 otherwise.
-        \choice OR function, i.e., the function that evaluates to 1 if and only if at least one of the inputs are 1, and 0 otherwise.
+        \CorrectChoice AND function, i.e., the function that evaluates to 1 if and only if all inputs are 1, and 0 otherwise.
+        \CorrectChoice OR function, i.e., the function that evaluates to 1 if and only if at least one of the inputs are 1, and 0 otherwise.
         \choice XOR function, i.e., the function that evaluates to 1 if and only if the inputs are not all the same. For example
         $$
         \operatorname{XOR}(1,0) = 1, \textrm{ but } \operatorname{XOR}(1,1) = 0.
@@ -896,7 +903,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \begin{checkboxes}
         \choice $N$
         \choice $N\times M$
-        \choice $M$
+        \CorrectChoice $M$
     \end{checkboxes}
 
 
@@ -909,8 +916,8 @@ For questions where you must fill in a blank, please make sure your final answer
     \begin{checkboxes}
         \choice The number of mistakes the perceptron algorithm makes is proportional to the number of points in the dataset. 
         \choice The perceptron algorithm converges on any dataset.
-        \choice The perceptron algorithm can be used in the context of online learning.
-        \choice For linearly separable data, the perceptron algorithm always finds the separating hyperplane with the largest margin.
+        \CorrectChoice The perceptron algorithm can be used in the context of online learning.
+        \CorrectChoice For linearly separable data, the perceptron algorithm always finds the separating hyperplane with the largest margin.
         \choice None of the above.
     \end{checkboxes}
     }
@@ -927,7 +934,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select one:}
     \begin{checkboxes}
         \choice $[1,-2]$
-        \choice $[2,0]$
+        \CorrectChoice $[2,0]$
         \choice $[-1,1]$
         \choice $[1,-3]$
     \end{checkboxes}
@@ -941,7 +948,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select one:}
     \begin{checkboxes}
         \choice $2$
-        \choice $3$
+        \CorrectChoice $3$
         \choice $5$
         \choice Infinitely many (the algorithm does not converge)
     \end{checkboxes}
@@ -957,10 +964,10 @@ For questions where you must fill in a blank, please make sure your final answer
     {%
     \checkboxchar{$\Box$} \checkedchar{$\blacksquare$}
     \begin{checkboxes}
-        \choice If the minimum distance from any data point to the separating hyperplane is increased, without any other change to the data points, the mistake bound will also increase.
+        \CorrectChoice If the minimum distance from any data point to the separating hyperplane is increased, without any other change to the data points, the mistake bound will also increase.
         \choice If the whole dataset is shifted away from origin, then the mistake bound will also increase.
         \choice If the size of the data set (i.e., the maximum pair-wise distance between data points) is increased, then the mistake bound will also increase.
-        \choice The mistake bound is linearly inverse-proportional to the minimum distance of any data point to the separating hyperplane of the data.
+        \CorrectChoice The mistake bound is linearly inverse-proportional to the minimum distance of any data point to the separating hyperplane of the data.
         \choice None of the above.
     \end{checkboxes}
     }
@@ -972,7 +979,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select one:}
     \begin{checkboxes}
         \choice $1$
-        \choice $2$
+        \CorrectChoice $2$
         \choice $3$
         \choice $4$
     \end{checkboxes}
@@ -988,7 +995,7 @@ For questions where you must fill in a blank, please make sure your final answer
         \choice $[-1,1]$
         \choice $[4,6]$
         \choice $[-3,-1]$
-        \choice $[5,5]$
+        \CorrectChoice $[5,5]$
     \end{checkboxes}
 
     
@@ -999,9 +1006,9 @@ For questions where you must fill in a blank, please make sure your final answer
     \checkboxchar{$\Box$} \checkedchar{$\blacksquare$}
     \begin{checkboxes}
         \choice $\bm{\theta} = [2,1]$, error  = 5/13
-        \choice $\bm{\theta} = [-2,1]$, error = 5/13
-        \choice $\bm{\theta} = [2,-1]$, error = 8/13
-        \choice $\bm{\theta} = [2,-1]$, error = 5/13
+        \CorrectChoice $\bm{\theta} = [-2,1]$, error = 5/13
+        \CorrectChoice $\bm{\theta} = [2,-1]$, error = 8/13
+        \CorrectChoice $\bm{\theta} = [2,-1]$, error = 5/13
     \end{checkboxes}
     }
     
@@ -1026,7 +1033,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \begin{checkboxes}
         \choice $w_1 = w_2, b_1 = b_2$
         \choice $w_1 \neq w_2, b_1 = b_2$
-        \choice $w_1 = w_2, b_1 \neq b_2$
+        \CorrectChoice $w_1 = w_2, b_1 \neq b_2$
         \choice $w_1 \neq w_2, b_1 \neq b_2$
     \end{checkboxes}
     
@@ -1044,7 +1051,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select one:}
     \begin{checkboxes}
         \choice $w_k = \frac{\sum_{i=1}^N x_k^{(i)}(y^{(i)}-\sum_{j=1,j\neq k}^M w_j x_j^{(i)})}{\sum_{i=1}^N (x_k^{(i)})^2}$
-        \choice $w_k = \frac{\sum_{i=1}^N x_k^{(i)}(y^{(i)}-\sum_{j=1,j\neq k}^M w_j x_j^{(i)})}{\sum_{i=1}^N (y^{(i)})^2}$
+        \CorrectChoice $w_k = \frac{\sum_{i=1}^N x_k^{(i)}(y^{(i)}-\sum_{j=1,j\neq k}^M w_j x_j^{(i)})}{\sum_{i=1}^N (y^{(i)})^2}$
         \choice $w_k = \sum_{i=1}^N x_k^{(i)}(y^{(i)}-\sum_{j=1}^M w_j x_j^{(i)})$
         \choice $w_k = \frac{\sum_{i=1}^N x_k^{(i)}(y^{(i)}-\sum_{j=1,j\neq k}^M w_j x_j^{(i)})}{\sum_{i=1}^N (x_k^{(i)} y^{(i)})^2}$
     \end{checkboxes}
@@ -1058,7 +1065,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select one:}
     \begin{checkboxes}
         \choice $N$ coefficients, $M$ equations
-        \choice $M$ coefficients, $N$ equations
+        \CorrectChoice $M$ coefficients, $N$ equations
         \choice $M$ coefficients, $M$ equations
         \choice $N$ coefficients, $N$ equations
     \end{checkboxes}
@@ -1088,7 +1095,7 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \textbf{Select one:}
     \begin{checkboxes}
-        \choice True
+        \CorrectChoice True
         \choice False
     \end{checkboxes}
     
@@ -1098,7 +1105,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select one:}
     \begin{checkboxes}
         \choice True
-        \choice False
+        \CorrectChoice False
     \end{checkboxes}
     
     
@@ -1118,7 +1125,7 @@ For questions where you must fill in a blank, please make sure your final answer
     
         \textbf{Select one:}
     \begin{checkboxes}
-        \choice True
+        \CorrectChoice True
         \choice False
     \end{checkboxes}
     
@@ -1135,17 +1142,20 @@ For questions where you must fill in a blank, please make sure your final answer
 
     1: \quad
     \begin{tcolorbox}[fit,height=1cm, width=2cm, blank, borderline={1pt}{-2pt},nobeforeafter]
-    \end{tcolorbox}
+    2
+    \end{tcolorbox} 
     
     
     2: \quad
     \begin{tcolorbox}[fit,height=1cm, width=2cm, blank, borderline={1pt}{-2pt},nobeforeafter]
-    \end{tcolorbox}
+    1
+    \end{tcolorbox} 
     
     
     3: \quad
     \begin{tcolorbox}[fit,height=1cm, width=2cm, blank, borderline={1pt}{-2pt},nobeforeafter]
-    \end{tcolorbox}
+    3
+    \end{tcolorbox} 
     
     
     \newpage
@@ -1158,10 +1168,10 @@ For questions where you must fill in a blank, please make sure your final answer
     \textbf{Select all that apply:}
     \begin{checkboxes}
         \choice $f(x) = x, dom(f) = \mathbb{R}$
-        \choice $f(x) = x^3 + 2x + 3, dom(f) = \mathbb{R}$
+        \CorrectChoice $f(x) = x^3 + 2x + 3, dom(f) = \mathbb{R}$
         \choice $f(x) = \log x, dom(f) = \mathbb{R}_{++}$ (the set of positive real numbers)
-        \choice $f(x) = |x|, dom(f) = \mathbb{R}$
-        \choice $f(x) = ||\xv||_2,\, dom(f) = \mathbb{R}^n$
+        \CorrectChoice $f(x) = |x|, dom(f) = \mathbb{R}$
+        \CorrectChoice $f(x) = ||\xv||_2,\, dom(f) = \mathbb{R}^n$
         \choice None of the above.
     \end{checkboxes}
     }
@@ -1174,8 +1184,8 @@ For questions where you must fill in a blank, please make sure your final answer
     \checkboxchar{$\Box$} \checkedchar{$\blacksquare$}
     \begin{checkboxes}
         \choice If the matrix $\Xv^T\Xv$ is invertible, the exact solution is always preferred for solving the solution to linear regression as computing matrix inversions and multiplications are fast regardless of the size of the dataset.
-        \choice Assume $N$ is the number of examples and $M$ is the number of features. The computational complexity of $N$ iterations of batch gradient descent is $\mathcal{O}(MN)$.
-        \choice The computational complexity of the closed form solution is linear in number of parameters/features.
+        \CorrectChoice Assume $N$ is the number of examples and $M$ is the number of features. The computational complexity of $N$ iterations of batch gradient descent is $\mathcal{O}(MN)$.
+        \CorrectChoice The computational complexity of the closed form solution is linear in number of parameters/features.
         \choice None of the above.
     \end{checkboxes}
     }
@@ -1197,6 +1207,7 @@ For questions where you must fill in a blank, please make sure your final answer
     Fill in the blank with the gradient on the weight you computed, rounded to 2 decimal places after the decimal point.
     
     \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
+	    $[-6.80, -23.60]^T$
     \end{tcolorbox}
     
     
@@ -1204,12 +1215,12 @@ For questions where you must fill in a blank, please make sure your final answer
     \question[4] Based on the data of the previous question, please compute the direct solution of the weight and the intercept for the objective function defined in the previous question, rounded to 2 decimal places after the decimal point.
     
     Weight: \quad
-    \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
+    \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]  25.60
     \end{tcolorbox}
     
     
     Intercept: \quad
-    \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
+    \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt] 6.80
     \end{tcolorbox}
     
     
@@ -1218,6 +1229,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \question[2] Using the dataset and model given in question \ref{Q7_linear_regression}, perform two steps of batch gradient descent on the data. Fill in the blank with the value of the weight after two steps of batch gradient descent. Let the learning rate be $0.01$. Round to 2 decimal places after the decimal point.
     
     \begin{tcolorbox}[fit,height=1cm, width=4cm, blank, borderline={1pt}{-2pt},nobeforeafter, top=2pt, left=2pt, right=2pt, bottom=2pt]
+	    $[0.24, 0.90]$
     \end{tcolorbox}
     
     
@@ -1228,7 +1240,7 @@ For questions where you must fill in a blank, please make sure your final answer
     \begin{checkboxes}
         \choice $1$
         \choice $0.1$
-        \choice $0.01$
+        \CorrectChoice $0.01$
         \choice $0.001$
     \end{checkboxes}
     
@@ -1252,6 +1264,7 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \begin{tcolorbox}[fit,height=3cm,blank, borderline={1pt}{-2pt},nobeforeafter]
     %Input your solution here.  Do not change any of the specifications of this solution box.
+	    $[
     \end{tcolorbox}
 \end{comment}
 
@@ -1268,13 +1281,13 @@ For questions where you must fill in a blank, please make sure your final answer
     
     \begin{solution}
     % If you are using the latex template, remove the empty spaces
-    \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip
-    \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip
-    \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip
-    \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip
-    \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip
-    \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip
-    \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip \bigskip
+ \begin{enumerate}
+        \item Did you receive any help whatsoever from anyone in solving this assignment? Is so, include full details. \\
+		NO
+        \item Did you give any help whatsoever to anyone in solving this assignment? Is so, include full details. \\ NO
+        \item Did you find or come across code that implements any part of this assignment ? If so, include full details. \\ NO
+    \end{enumerate}
+
     \end{solution}
     
 
