@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Written Questions [20 pts]}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Multiple Choice [10 pts]}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Viterbi Decoding}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Warm-up Exercise: Forward-Backward Algorithm [4 pts]}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Empirical Questions [6 pts]}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Collaboration Policy}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Programming [80 pts]}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{The Tasks and Data Sets}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Learning}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Evaluation and Decoding}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Forward Backward Algorithm and Minimal Bayes Risk Decoding}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Implementation Details}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Log-Space Arithmetic for Avoiding Underflow}{subsection.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.4}{Gradescope Submission}{section.2}% 14

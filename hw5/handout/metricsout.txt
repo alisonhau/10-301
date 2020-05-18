@@ -1,0 +1,26 @@
+epoch=1 crossentropy(train): 2.270152
+epoch=1 crossentropy(test): 2.273097
+epoch=2 crossentropy(train): 2.047853
+epoch=2 crossentropy(test): 2.048140
+epoch=3 crossentropy(train): 1.937066
+epoch=3 crossentropy(test): 1.956192
+epoch=4 crossentropy(train): 1.747133
+epoch=4 crossentropy(test): 1.840171
+epoch=5 crossentropy(train): 1.689443
+epoch=5 crossentropy(test): 1.824919
+epoch=6 crossentropy(train): 1.746024
+epoch=6 crossentropy(test): 1.930265
+epoch=7 crossentropy(train): 1.810180
+epoch=7 crossentropy(test): 1.975809
+epoch=8 crossentropy(train): 1.805840
+epoch=8 crossentropy(test): 1.974274
+epoch=9 crossentropy(train): 1.836514
+epoch=9 crossentropy(test): 1.986859
+epoch=10 crossentropy(train): 1.841536
+epoch=10 crossentropy(test): 2.086506
+epoch=11 crossentropy(train): 1.886645
+epoch=11 crossentropy(test): 2.191273
+epoch=12 crossentropy(train): 2.108877
+epoch=12 crossentropy(test): 2.336750
+error(train): 0.82
+error(test): 0.87
